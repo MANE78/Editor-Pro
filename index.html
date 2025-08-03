@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Editor Pro offers professional video editing, graphic design, and social media content creation." />
+    <meta name="description" content="Editor Pro: Your creative partner for professional video editing, graphic design, and social media management. We bring your vision to life." />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?display=swap&family=Work+Sans:wght@400;500;700;900&family=Noto+Sans+Arabic:wght@400;700" />
     <title>Editor Pro - Professional Visual Content</title>
@@ -14,7 +14,6 @@
       html[lang="en"] body { font-family: "Work Sans", sans-serif; }
       html[lang="ar"] body { font-family: "Noto Sans Arabic", sans-serif; }
       html[dir="rtl"] { text-align: right; }
-      /* Active nav link style */
       .nav-active { color: #59e7e2; font-weight: 700; }
     </style>
   </head>
@@ -28,7 +27,7 @@
         </a>
         <div class="hidden md:flex items-center gap-6">
           <nav class="flex items-center gap-6" aria-label="Main navigation">
-            <a data-key="navHome" class="text-sm font-medium hover:text-[#59e7e2]" href="index.html">Home</a>
+            <a data-key="navHome" class="text-sm font-medium hover:text-[#59e7e2] nav-active" href="index.html">Home</a>
             <a data-key="navServices" class="text-sm font-medium hover:text-[#59e7e2]" href="services.html">Services</a>
             <a data-key="navPortfolio" class="text-sm font-medium hover:text-[#59e7e2]" href="portfolio.html">Portfolio</a>
             <a data-key="navAbout" class="text-sm font-medium hover:text-[#59e7e2]" href="about.html">About</a>
@@ -37,8 +36,8 @@
           <div class="flex items-center gap-4 border-l border-gray-200 dark:border-gray-700 pl-6">
             <button id="lang-switcher-desktop" class="text-sm font-bold hover:text-[#59e7e2]"></button>
             <button id="theme-toggle" type="button" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
-              <svg id="theme-toggle-dark-icon" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-              <svg id="theme-toggle-light-icon" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 5.05A1 1 0 016.465 3.636l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+              <svg id="theme-toggle-dark-icon" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+              <svg id="theme-toggle-light-icon" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 5.05A1 1 0 016.465 3.636l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
             </button>
           </div>
         </div>
@@ -47,18 +46,63 @@
             <button id="menu-btn" class="p-2 rounded-md focus:outline-none"><svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg></button>
         </div>
       </header>
-      <div id="mobile-menu" class="hidden md:hidden"><nav class="px-2 pt-2 pb-3 space-y-1"><a data-key="navHomeMobile" href="index.html" class="block px-3 py-2 rounded-md text-base font-medium"></a><a data-key="navServicesMobile" href="services.html" class="block px-3 py-2 rounded-md text-base font-medium"></a><a data-key="navPortfolioMobile" href="portfolio.html" class="block px-3 py-2 rounded-md text-base font-medium"></a><a data-key="navAboutMobile" href="about.html" class="block px-3 py-2 rounded-md text-base font-medium"></a><a data-key="navContactMobile" href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium"></a></nav></div>
+      <div id="mobile-menu" class="hidden md:hidden"><nav class="px-2 pt-2 pb-3 space-y-1"><a data-key="navHomeMobile" href="index.html" class="block px-3 py-2 rounded-md text-base font-medium nav-active"></a><a data-key="navServicesMobile" href="services.html" class="block px-3 py-2 rounded-md text-base font-medium"></a><a data-key="navPortfolioMobile" href="portfolio.html" class="block px-3 py-2 rounded-md text-base font-medium"></a><a data-key="navAboutMobile" href="about.html" class="block px-3 py-2 rounded-md text-base font-medium"></a><a data-key="navContactMobile" href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium"></a></nav></div>
 
       <main class="flex-grow">
-        <section id="home" class="min-h-screen flex items-center justify-center text-center -mt-16 px-4">
+        <!-- Hero Section -->
+        <section class="min-h-screen flex items-center justify-center text-center -mt-16 px-4">
             <div class="w-full max-w-4xl">
-              <div class="flex min-h-[50vh] md:min-h-[60vh] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-6 md:p-10" style='background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDpbA7-xwI4xpTdedIJZfYSqulOR_9pZ5rZ0CI_IE8Q54bY6DpmG1y1A5DYHvS2Mj-X32Rt8706Rnmjkm1ucUfI1XOIBQ0r0iRoQKGMccg15odGOlvAxiBdLnPeglgi2Au22fDsqT-hvzzM7BDhMbQJMtbqvkBjBz3zZlCKv3ITEEzPFV_2dzIY8bVQ9-kizcAzL-JzD9dBTfcd7ZH41HxD9lw2Z0ZsytCqoF16StecH8U4qiWeZz7w7uQgs0poQy6kQDs05_lm4cw");'>
+              <div class="flex min-h-[50vh] md:min-h-[60vh] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-6 md:p-10" style='background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?q=80&w=2070&auto=format&fit=crop");'>
                 <div class="flex flex-col gap-2">
                   <h1 data-key="heroTitle" class="text-white text-4xl md:text-5xl font-black leading-tight tracking-tight"></h1>
                   <p data-key="heroSubtitle" class="text-white text-base md:text-lg font-normal leading-normal max-w-2xl mx-auto"></p>
                 </div>
                 <a data-key="heroButton" href="portfolio.html" class="mt-4 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center rounded-full h-12 px-6 bg-[#59e7e2] text-[#111717] text-base font-bold hover:opacity-90 transition-opacity"></a>
               </div>
+            </div>
+        </section>
+
+        <!-- Services Overview Section -->
+        <section class="py-16 md:py-24 container mx-auto px-4">
+          <div class="text-center mb-12">
+            <h2 data-key="servicesHeader" class="text-3xl md:text-4xl font-bold"></h2>
+            <p data-key="servicesSubheader" class="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"></p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+              <h3 data-key="service1Title" class="text-xl font-bold mb-2"></h3>
+              <p data-key="service1Desc" class="text-gray-600 dark:text-gray-400"></p>
+            </div>
+            <div class="text-center p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+              <h3 data-key="service2Title" class="text-xl font-bold mb-2"></h3>
+              <p data-key="service2Desc" class="text-gray-600 dark:text-gray-400"></p>
+            </div>
+            <div class="text-center p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+              <h3 data-key="service3Title" class="text-xl font-bold mb-2"></h3>
+              <p data-key="service3Desc" class="text-gray-600 dark:text-gray-400"></p>
+            </div>
+          </div>
+           <div class="text-center mt-12">
+             <a data-key="servicesButton" href="services.html" class="inline-block rounded-full h-12 px-8 bg-[#59e7e2] text-[#111717] text-base font-bold leading-[48px] hover:opacity-90 transition-opacity"></a>
+          </div>
+        </section>
+
+         <!-- Portfolio Preview Section -->
+        <section class="bg-gray-50 dark:bg-gray-800 py-16 md:py-24">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 data-key="portfolioHeader" class="text-3xl md:text-4xl font-bold"></h2>
+                    <p data-key="portfolioSubheader" class="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"></p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <img src="https://www.dropbox.com/scl/fi/h4e255oqzmwbv8u28lkyv/WhatsApp-Image-2025-08-01-at-06.12.47_a1b006b2.jpg?rlkey=klud2e7yvwuwm83c8dbpdf723&raw=1" class="rounded-lg h-full w-full object-cover aspect-square">
+                    <img src="https://www.dropbox.com/scl/fi/l7yjqz7otr07j0jse3015/_-1.png?rlkey=0z3i9sgem0n0wgclsoet7ks54&raw=1" class="rounded-lg h-full w-full object-cover aspect-square">
+                    <video src="https://www.dropbox.com/scl/fi/0k9kd73jg3cmnjxtvjq4t/0612.mp4?rlkey=jblgpb8wme1yee3ce2n8slb16&raw=1" controls class="rounded-lg h-full w-full object-cover aspect-square"></video>
+                    <img src="https://www.dropbox.com/scl/fi/wpovk2rayc7r92g3gzmcl/WhatsApp-Image-2025-07-29-at-16.16.47_bd215430.jpg?rlkey=igvnf8hgijs7ctkidiip0py23&raw=1" class="rounded-lg h-full w-full object-cover aspect-square">
+                </div>
+                <div class="text-center mt-12">
+                    <a data-key="portfolioButton" href="portfolio.html" class="inline-block rounded-full h-12 px-8 bg-transparent border-2 border-[#59e7e2] text-[#59e7e2] text-base font-bold leading-[44px] hover:bg-[#59e7e2] hover:text-[#111717] transition-colors"></a>
+                </div>
             </div>
         </section>
       </main>
@@ -73,54 +117,32 @@
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const translations = {
-            en: { navHome: 'Home', navServices: 'Services', navPortfolio: 'Portfolio', navAbout: 'About', navContact: 'Contact', heroTitle: 'Crafting Visual Stories That Resonate', heroSubtitle: 'We are Editor Pro, a team passionate about transforming ideas into visually compelling content.', heroButton: 'View Our Work', footerRights: '© 2025 Editor Pro. All rights reserved.', langSwitch: 'العربية' },
-            ar: { navHome: 'الرئيسية', navServices: 'خدماتنا', navPortfolio: 'أعمالنا', navAbout: 'من نحن', navContact: 'اتصل بنا', heroTitle: 'نصنع قصصًا مرئية تلامس الوجدان', heroSubtitle: 'نحن إديتور برو، فريق شغوف بتحويل الأفكار إلى محتوى مرئي جذاب ومؤثر.', heroButton: 'شاهد أعمالنا', footerRights: '© 2025 إديتور برو. جميع الحقوق محفوظة.', langSwitch: 'English' }
+            en: { 
+                navHome: 'Home', navServices: 'Services', navPortfolio: 'Portfolio', navAbout: 'About', navContact: 'Contact', 
+                heroTitle: 'Crafting Visual Stories That Resonate', heroSubtitle: 'We are Editor Pro, a team passionate about transforming ideas into visually compelling content.', heroButton: 'View Our Work', 
+                servicesHeader: 'Our Core Services', servicesSubheader: 'We provide a range of creative services to help your brand shine.', service1Title: 'Video Editing', service1Desc: 'From short clips to long features, we craft narratives that captivate.', service2Title: 'Graphic Design', service2Desc: 'Stunning visuals that define your brand identity and attract customers.', service3Title: 'Social Media', service3Desc: 'Engaging content strategies to grow your online presence.', servicesButton: 'Explore All Services',
+                portfolioHeader: 'A Glimpse of Our Work', portfolioSubheader: 'We take pride in our work. Here are some of our favorite projects.', portfolioButton: 'See Full Portfolio',
+                footerRights: '© 2025 Editor Pro. All rights reserved.', langSwitch: 'العربية' 
+            },
+            ar: { 
+                navHome: 'الرئيسية', navServices: 'خدماتنا', navPortfolio: 'أعمالنا', navAbout: 'من نحن', navContact: 'اتصل بنا', 
+                heroTitle: 'نصنع قصصًا مرئية تلامس الوجدان', heroSubtitle: 'نحن إديتور برو، فريق شغوف بتحويل الأفكار إلى محتوى مرئي جذاب ومؤثر.', heroButton: 'شاهد أعمالنا',
+                servicesHeader: 'خدماتنا الأساسية', servicesSubheader: 'نقدم مجموعة من الخدمات الإبداعية لمساعدة علامتك التجارية على التألق.', service1Title: 'مونتاج الفيديو', service1Desc: 'من المقاطع القصيرة إلى الأفلام الطويلة، نصنع قصصًا تأسر القلوب.', service2Title: 'تصميم الجرافيك', service2Desc: 'تصاميم مذهلة تحدد هوية علامتك التجارية وتجذب العملاء.', service3Title: 'التواصل الاجتماعي', service3Desc: 'استراتيجيات محتوى جذابة لتنمية وجودك على الإنترنت.', servicesButton: 'اكتشف كل الخدمات',
+                portfolioHeader: 'لمحة من أعمالنا', portfolioSubheader: 'نحن نفخر بعملنا. إليك بعض من مشاريعنا المفضلة.', portfolioButton: 'شاهد معرض الأعمال الكامل',
+                footerRights: '© 2025 إديتور برو. جميع الحقوق محفوظة.', langSwitch: 'English' 
+            }
         };
-        const setLanguage = (lang) => {
-          document.documentElement.setAttribute('lang', lang);
-          document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
-          document.querySelectorAll('[data-key]').forEach(el => {
-            const key = el.getAttribute('data-key').replace('Mobile', '');
-            if(translations[lang][key]) el.textContent = translations[lang][key];
-          });
-          document.getElementById('lang-switcher-desktop').textContent = translations[lang].langSwitch;
-          document.getElementById('lang-switcher-mobile').textContent = translations[lang].langSwitch;
-          localStorage.setItem('language', lang);
-          updateActiveNav();
-        };
+        const setLanguage = (lang) => { document.documentElement.setAttribute('lang', lang); document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr'); document.querySelectorAll('[data-key]').forEach(el => { const key = el.getAttribute('data-key').replace('Mobile', ''); if(translations[lang][key]) el.textContent = translations[lang][key]; }); document.getElementById('lang-switcher-desktop').textContent = translations[lang].langSwitch; document.getElementById('lang-switcher-mobile').textContent = translations[lang].langSwitch; localStorage.setItem('language', lang); };
         const toggleLanguage = () => { setLanguage((localStorage.getItem('language') || 'en') === 'en' ? 'ar' : 'en'); };
         const themeToggleBtn = document.getElementById('theme-toggle');
-        const updateThemeIcons = () => {
-          const isDark = document.documentElement.classList.contains('dark');
-          document.getElementById('theme-toggle-light-icon').classList.toggle('hidden', !isDark);
-          document.getElementById('theme-toggle-dark-icon').classList.toggle('hidden', isDark);
-        };
-        const applyInitialTheme = () => {
-          const theme = localStorage.getItem('color-theme');
-          if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-          } else {
-            document.documentElement.classList.remove('dark');
-          }
-          updateThemeIcons();
-        };
-        themeToggleBtn.addEventListener('click', () => {
-          const isDark = document.documentElement.classList.toggle('dark');
-          localStorage.setItem('color-theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
-          updateThemeIcons();
-        });
+        const updateThemeIcons = () => { const isDark = document.documentElement.classList.contains('dark'); document.getElementById('theme-toggle-light-icon').classList.toggle('hidden', !isDark); document.getElementById('theme-toggle-dark-icon').classList.toggle('hidden', isDark); };
+        const applyInitialTheme = () => { const theme = localStorage.getItem('color-theme'); if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) { document.documentElement.classList.add('dark'); } else { document.documentElement.classList.remove('dark'); } updateThemeIcons(); };
+        themeToggleBtn.addEventListener('click', () => { document.documentElement.classList.toggle('dark'); localStorage.setItem('color-theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light'); updateThemeIcons(); });
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
         document.getElementById('lang-switcher-desktop').addEventListener('click', toggleLanguage);
         document.getElementById('lang-switcher-mobile').addEventListener('click', toggleLanguage);
-        const updateActiveNav = () => {
-          const path = window.location.pathname.split("/").pop() || 'index.html';
-          document.querySelectorAll('header nav a').forEach(a => {
-            a.classList.remove('nav-active');
-            if (a.getAttribute('href') === path) a.classList.add('nav-active');
-          });
-        };
         applyInitialTheme();
         setLanguage(localStorage.getItem('language') || 'en');
       });
