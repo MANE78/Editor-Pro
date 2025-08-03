@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Editor Pro offers professional video editing, graphic design, and social media content creation." />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?display=swap&family=Work+Sans:wght@400;500;700;900&family=Noto+Sans+Arabic:wght@400;700" />
+    <title>Editor Pro - Professional Visual Content</title>
+    <link rel="icon" href="https://www.dropbox.com/scl/fi/srzgsb9543plxf2ov64yt/.png?rlkey=403vd7y4dc2g4erqv1u3r16di&raw=1" type="image/png">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style>
+      body, header, footer, section { transition: background-color 0.3s ease, color 0.3s ease; }
+      html[lang="en"] body { font-family: "Work Sans", sans-serif; }
+      html[lang="ar"] body { font-family: "Noto Sans Arabic", sans-serif; }
+      html[dir="rtl"] { text-align: right; }
+      /* Active nav link style */
+      .nav-active { color: #59e7e2; font-weight: 700; }
+    </style>
+  </head>
+  <body class="bg-white dark:bg-gray-900">
+    <div class="relative flex size-full min-h-screen flex-col overflow-x-hidden text-gray-900 dark:text-gray-200">
+      
+      <header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-gray-200 dark:border-gray-700 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm px-4 sm:px-10 py-3">
+        <a href="index.html" class="flex items-center gap-3" aria-label="Editor Pro Homepage">
+          <img src="https://www.dropbox.com/scl/fi/srzgsb9543plxf2ov64yt/.png?rlkey=403vd7y4dc2g4erqv1u3r16di&raw=1" alt="Editor Pro Logo" class="h-8 w-auto">
+          <h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">EDITOR PRO</h2>
+        </a>
+        <div class="hidden md:flex items-center gap-6">
+          <nav class="flex items-center gap-6" aria-label="Main navigation">
+            <a data-key="navHome" class="text-sm font-medium hover:text-[#59e7e2]" href="index.html">Home</a>
+            <a data-key="navServices" class="text-sm font-medium hover:text-[#59e7e2]" href="services.html">Services</a>
+            <a data-key="navPortfolio" class="text-sm font-medium hover:text-[#59e7e2]" href="portfolio.html">Portfolio</a>
+            <a data-key="navAbout" class="text-sm font-medium hover:text-[#59e7e2]" href="about.html">About</a>
+            <a data-key="navContact" class="text-sm font-medium hover:text-[#59e7e2]" href="contact.html">Contact</a>
+          </nav>
+          <div class="flex items-center gap-4 border-l border-gray-200 dark:border-gray-700 pl-6">
+            <button id="lang-switcher-desktop" class="text-sm font-bold hover:text-[#59e7e2]"></button>
+            <button id="theme-toggle" type="button" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+              <svg id="theme-toggle-dark-icon" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+              <svg id="theme-toggle-light-icon" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 5.05A1 1 0 016.465 3.636l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+            </button>
+          </div>
+        </div>
+        <div class="md:hidden flex items-center gap-2">
+            <button id="lang-switcher-mobile" class="text-sm font-bold hover:text-[#59e7e2]"></button>
+            <button id="menu-btn" class="p-2 rounded-md focus:outline-none"><svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg></button>
+        </div>
+      </header>
+      <div id="mobile-menu" class="hidden md:hidden"><nav class="px-2 pt-2 pb-3 space-y-1"><a data-key="navHomeMobile" href="index.html" class="block px-3 py-2 rounded-md text-base font-medium"></a><a data-key="navServicesMobile" href="services.html" class="block px-3 py-2 rounded-md text-base font-medium"></a><a data-key="navPortfolioMobile" href="portfolio.html" class="block px-3 py-2 rounded-md text-base font-medium"></a><a data-key="navAboutMobile" href="about.html" class="block px-3 py-2 rounded-md text-base font-medium"></a><a data-key="navContactMobile" href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium"></a></nav></div>
+
+      <main class="flex-grow">
+        <section id="home" class="min-h-screen flex items-center justify-center text-center -mt-16 px-4">
+            <div class="w-full max-w-4xl">
+              <div class="flex min-h-[50vh] md:min-h-[60vh] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-6 md:p-10" style='background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDpbA7-xwI4xpTdedIJZfYSqulOR_9pZ5rZ0CI_IE8Q54bY6DpmG1y1A5DYHvS2Mj-X32Rt8706Rnmjkm1ucUfI1XOIBQ0r0iRoQKGMccg15odGOlvAxiBdLnPeglgi2Au22fDsqT-hvzzM7BDhMbQJMtbqvkBjBz3zZlCKv3ITEEzPFV_2dzIY8bVQ9-kizcAzL-JzD9dBTfcd7ZH41HxD9lw2Z0ZsytCqoF16StecH8U4qiWeZz7w7uQgs0poQy6kQDs05_lm4cw");'>
+                <div class="flex flex-col gap-2">
+                  <h1 data-key="heroTitle" class="text-white text-4xl md:text-5xl font-black leading-tight tracking-tight"></h1>
+                  <p data-key="heroSubtitle" class="text-white text-base md:text-lg font-normal leading-normal max-w-2xl mx-auto"></p>
+                </div>
+                <a data-key="heroButton" href="portfolio.html" class="mt-4 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center rounded-full h-12 px-6 bg-[#59e7e2] text-[#111717] text-base font-bold hover:opacity-90 transition-opacity"></a>
+              </div>
+            </div>
+        </section>
+      </main>
+
+      <footer class="flex justify-center border-t border-gray-200 dark:border-gray-700">
+        <div class="flex max-w-[960px] flex-1 flex-col items-center gap-6 px-5 py-10 text-center">
+          <p data-key="footerRights" class="text-sm font-normal leading-normal text-gray-500 dark:text-gray-400"></p>
+        </div>
+      </footer>
+    </div>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const translations = {
+            en: { navHome: 'Home', navServices: 'Services', navPortfolio: 'Portfolio', navAbout: 'About', navContact: 'Contact', heroTitle: 'Crafting Visual Stories That Resonate', heroSubtitle: 'We are Editor Pro, a team passionate about transforming ideas into visually compelling content.', heroButton: 'View Our Work', footerRights: '© 2025 Editor Pro. All rights reserved.', langSwitch: 'العربية' },
+            ar: { navHome: 'الرئيسية', navServices: 'خدماتنا', navPortfolio: 'أعمالنا', navAbout: 'من نحن', navContact: 'اتصل بنا', heroTitle: 'نصنع قصصًا مرئية تلامس الوجدان', heroSubtitle: 'نحن إديتور برو، فريق شغوف بتحويل الأفكار إلى محتوى مرئي جذاب ومؤثر.', heroButton: 'شاهد أعمالنا', footerRights: '© 2025 إديتور برو. جميع الحقوق محفوظة.', langSwitch: 'English' }
+        };
+        const setLanguage = (lang) => {
+          document.documentElement.setAttribute('lang', lang);
+          document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+          document.querySelectorAll('[data-key]').forEach(el => {
+            const key = el.getAttribute('data-key').replace('Mobile', '');
+            if(translations[lang][key]) el.textContent = translations[lang][key];
+          });
+          document.getElementById('lang-switcher-desktop').textContent = translations[lang].langSwitch;
+          document.getElementById('lang-switcher-mobile').textContent = translations[lang].langSwitch;
+          localStorage.setItem('language', lang);
+          updateActiveNav();
+        };
+        const toggleLanguage = () => { setLanguage((localStorage.getItem('language') || 'en') === 'en' ? 'ar' : 'en'); };
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const updateThemeIcons = () => {
+          const isDark = document.documentElement.classList.contains('dark');
+          document.getElementById('theme-toggle-light-icon').classList.toggle('hidden', !isDark);
+          document.getElementById('theme-toggle-dark-icon').classList.toggle('hidden', isDark);
+        };
+        const applyInitialTheme = () => {
+          const theme = localStorage.getItem('color-theme');
+          if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+          updateThemeIcons();
+        };
+        themeToggleBtn.addEventListener('click', () => {
+          const isDark = document.documentElement.classList.toggle('dark');
+          localStorage.setItem('color-theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+          updateThemeIcons();
+        });
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+        document.getElementById('lang-switcher-desktop').addEventListener('click', toggleLanguage);
+        document.getElementById('lang-switcher-mobile').addEventListener('click', toggleLanguage);
+        const updateActiveNav = () => {
+          const path = window.location.pathname.split("/").pop() || 'index.html';
+          document.querySelectorAll('header nav a').forEach(a => {
+            a.classList.remove('nav-active');
+            if (a.getAttribute('href') === path) a.classList.add('nav-active');
+          });
+        };
+        applyInitialTheme();
+        setLanguage(localStorage.getItem('language') || 'en');
+      });
+    </script>
+  </body>
+</html>
